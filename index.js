@@ -1,5 +1,5 @@
 const sayBye = (name) => {
-  return `bye, ${name}`;
+  return `byex, ${name}`;
 };
 
 module.exports = {
