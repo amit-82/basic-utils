@@ -1,0 +1,23 @@
+{
+  "name": "@amit-82/basic-utils",
+  "version": "0.0.1",
+  "description": "Basic JS/TS utils for strings, array, objectsm etc...",
+  "main": "index.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@amit-82"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amit-82/basic-utils.git"
+  },
+  "keywords": [],
+  "author": "Amit Leshem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amit-82/basic-utils/issues"
+  },
+  "homepage": "https://github.com/amit-82/basic-utils#readme"
+}
