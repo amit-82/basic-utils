@@ -9,19 +9,19 @@ export const formattedNumber = (num: number, millions = false, kilos = false, pr
   let sufix = '';
   let divider = 1;
 
-  if (num > 1000000000000) {
+  if (num >= 1000000000000) {
     // trillion
     sufix = 'T';
     divider = 1000000000000;
-  } else if (num > 1000000000) {
+  } else if (num >= 1000000000) {
     // billion
     sufix = 'B';
     divider = 1000000000;
-  } else if (millions && num > 1000000) {
+  } else if (millions && num >= 1000000) {
     // million
     sufix = 'M';
     divider = 1000000;
-  } else if (kilos && num > 1000) {
+  } else if (kilos && num >= 1000) {
     // thousand
     sufix = 'K';
     divider = 1000;
