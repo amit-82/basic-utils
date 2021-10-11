@@ -1,6 +1,6 @@
 {
   "name": "@amit-82/basic-utils",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Basic JS/TS utils for strings, array, objectsm etc...",
   "main": "index.js",
   "types": "./lib/**/*.d.ts",
