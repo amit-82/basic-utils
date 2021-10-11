@@ -1,4 +1,4 @@
-import { convertStringToNumberAndDivideBy100 } from '../../src/strings/convertToNumber';
+import { convertStringToNumberAndDivideBy100 } from './convertToNumber';
 
 test('Test convertStringToNumberAndDivideBy100', () => {
   expect(convertStringToNumberAndDivideBy100('5.12')).toBe(0.0512); // default with precision 2

@@ -1,4 +1,4 @@
-import { nonNumeric, nonNumericMinusDot } from '../../src/strings/regs';
+import { nonNumeric, nonNumericMinusDot } from './regs';
 
 describe('Test someNonNumeric RegExp', () => {
   test('someNonNumeric find strings with non numeric chars (including minus and dots)', () => {

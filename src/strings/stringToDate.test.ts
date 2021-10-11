@@ -1,4 +1,4 @@
-import { converNamedMonthDate, rearrangeFromAmericanFormat } from '../../src/strings/stringToDate';
+import { converNamedMonthDate, rearrangeFromAmericanFormat } from './stringToDate';
 
 describe('Testing rearrangeFromAmericanFormat', () => {
   test('convert cases', () => {
