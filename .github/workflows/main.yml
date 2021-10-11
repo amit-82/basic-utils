@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      
+
 jobs:
   publish-gpr:
     runs-on: ubuntu-latest
@@ -17,6 +17,7 @@ jobs:
           scope: '@amit-82'
       - run: npm install
       - run: npm run test
+      - run: npm run build
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
