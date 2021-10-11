@@ -1,4 +1,4 @@
-import { formattedNumber } from './prettyNumber';
+import { formattedNumber } from '../../src/strings/prettyNumber';
 
 describe('texting formattedNumber', () => {
   test('check thounsads', () => {
