@@ -1,6 +1,6 @@
 const numberFormat = new Intl.NumberFormat('en-US');
 
-export const formattedNumberfactory =
+export const formattedNumberFactory =
   (millions = false, kilos = false, precision = 2) =>
   (num: number) =>
     formattedNumber(num, millions, kilos, precision);
