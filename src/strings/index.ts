@@ -1,5 +1,5 @@
 import { convertStringToNumberAndDivideBy100 } from './convertToNumber';
-import { formattedNumber, formattedNumberFactory } from './prettyNumber';
+import { formattedNumber, formattedNumberFactory, defaultFormattedNumber } from './prettyNumber';
 import { nonNumeric, nonNumericMinusDot } from './regs';
 import { converNamedMonthDate, rearrangeFromAmericanFormat } from './stringToDate';
 
