@@ -5,6 +5,8 @@ export const formattedNumberFactory =
   (num: number) =>
     formattedNumber(num, millions, kilos, precision);
 
+export const defaultFormattedNumber = formattedNumberFactory();
+
 export const formattedNumber = (num: number, millions = false, kilos = false, precision = 2): string => {
   let sufix = '';
   let divider = 1;
