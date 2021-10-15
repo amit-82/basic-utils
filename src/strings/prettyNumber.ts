@@ -7,7 +7,7 @@ export const formattedNumberFactory =
 
 export const defaultFormattedNumber = formattedNumberFactory();
 
-export const formattedNumber = (num: number, millions = false, kilos = false, precision = 2): string => {
+export const formattedNumber = (num: number | string, millions = false, kilos = false, precision = 2): string => {
   let sufix = '';
   let divider = 1;
 
@@ -29,6 +29,6 @@ export const formattedNumber = (num: number, millions = false, kilos = false, pr
     divider = 1000;
   }
 
-  num = Number((num / divider).toFixed(precision));
+  num = Number((+num / divider).toFixed(precision));
   return numberFormat.format(num) + sufix;
 };

@@ -32,4 +32,9 @@ describe('texting formattedNumber', () => {
     expect(formattedNumber(1845428908400)).toBe('1.85T');
     expect(formattedNumber(1845428908400, true, true, 3)).toBe('1.845T');
   });
+
+  test('test string input', () => {
+    expect(formattedNumber('1000000000')).toBe('1B');
+    expect(formattedNumber('18454289084')).toBe('18.45B');
+  });
 });
