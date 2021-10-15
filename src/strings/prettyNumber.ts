@@ -2,7 +2,7 @@ const numberFormat = new Intl.NumberFormat('en-US');
 
 export const formattedNumberFactory =
   (millions = false, kilos = false, precision = 2) =>
-  (num: number) =>
+  (num: number | string) =>
     formattedNumber(num, millions, kilos, precision);
 
 export const defaultFormattedNumber = formattedNumberFactory();
