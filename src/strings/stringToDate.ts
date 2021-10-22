@@ -40,12 +40,12 @@ const MONTH_TO_NUMBER = Object.freeze({
 } as Record<Month | ShortMonth, number>);
 
 /**
- * converts a string like "january 06, 2020" or "Jan 06, 2020" to "2020-00-06". months start at 0.
+ * converts a string like "january 06, 2020" or "Jan 06, 2020" to "2020-01-06". months start at 1.
  * @param str
- * @param januaryValue defaults to 0 (january will be "00"), if 1 january will be "01"
+ * @param januaryValue defaults to 1 (january will be "01"), if 0 january will be "00"
  * @returns
  */
-export function converNamedMonthDate(str: string, januaryValue = 0) {
+export function converNamedMonthDate(str: string, januaryValue = 1) {
   const parts = str.toLowerCase().replace(',', '').split(' ');
   const monthNumber = MONTH_TO_NUMBER[parts[0] as Month];
   if (monthNumber === undefined) {
