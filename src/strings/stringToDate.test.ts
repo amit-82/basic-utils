@@ -2,10 +2,10 @@ import { converNamedMonthDate, rearrangeFromAmericanFormat } from './stringToDat
 
 describe('Testing rearrangeFromAmericanFormat', () => {
   test('convert cases', () => {
-    expect(rearrangeFromAmericanFormat('12/28/2020')).toBe('2020-11-28');
-    expect(rearrangeFromAmericanFormat('1.16.1982', '.')).toBe('1982-00-16');
-    expect(rearrangeFromAmericanFormat('0/1/1982', '/', 0)).toBe('1982-00-01');
-    expect(rearrangeFromAmericanFormat('11/29/1982', '/', 0)).toBe('1982-11-29');
+    expect(rearrangeFromAmericanFormat('12/28/2020')).toBe('2020-12-28');
+    expect(rearrangeFromAmericanFormat('1.16.1982', '.')).toBe('1982-01-16');
+    expect(rearrangeFromAmericanFormat('1/1/1982', '/', -1)).toBe('1982-00-01');
+    expect(rearrangeFromAmericanFormat('12/29/1982', '/', -1)).toBe('1982-11-29');
   });
 });
 

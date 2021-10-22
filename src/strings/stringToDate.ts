@@ -57,7 +57,7 @@ export function converNamedMonthDate(str: string, januaryValue = 1) {
 }
 
 // 9/15/2021
-export function rearrangeFromAmericanFormat(original: string, dilimiter = '/', offestMonthBy = -1) {
+export function rearrangeFromAmericanFormat(original: string, dilimiter = '/', offestMonthBy = 0) {
   let parts = original.split(dilimiter);
   if (offestMonthBy != 0) {
     parts[0] = (+parts[0] + offestMonthBy).toString();
