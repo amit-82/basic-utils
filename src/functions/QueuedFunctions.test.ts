@@ -3,7 +3,7 @@ import { delay } from '../time';
 
 describe('Test QueuedFunctions', () => {
   const CAPACITY = 3;
-  const COOLDOWN = 30;
+  const COOLDOWN = 100;
 
   const nonFuncs = [{}, 'notFunc', 5, []];
 
@@ -38,13 +38,13 @@ describe('Test QueuedFunctions', () => {
 
     expect(counter).toBe(CAPACITY);
 
-    await delay(COOLDOWN + 10);
+    await delay(COOLDOWN + 30);
     expect(counter).toBe(CAPACITY * 2);
 
-    await delay(COOLDOWN + 10);
+    await delay(COOLDOWN + 30);
     expect(counter).toBe(CAPACITY * 3);
 
-    await delay(COOLDOWN + 10);
+    await delay(COOLDOWN + 30);
     expect(counter).toBe(CAPACITY * 3);
   });
 });
