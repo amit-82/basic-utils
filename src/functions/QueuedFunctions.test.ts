@@ -25,7 +25,7 @@ describe('Test QueuedFunctions', () => {
     expect(counter).toBe(CAPACITY);
   });
 
-  test('Should execute pending actions after cooldown', async () => {
+  test.only('Should execute pending actions after cooldown', async () => {
     const que = QueueFactory.createQueue(CAPACITY, COOLDOWN);
 
     let counter = 0;
