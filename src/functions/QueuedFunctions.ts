@@ -28,25 +28,20 @@ export class Queue {
       return false;
     }
 
-    console.log('>>>> TRY NEXT');
     let canInvokeNext = false;
     if (this._invokes.length < this._cap) {
-      console.log('>>>> TRY NEXT A');
       canInvokeNext = true;
     } else if (this._invokes[0] < new Date().getTime() - this._cool) {
-      console.log('>>>> TRY NEXT B');
       // oldest has expired
       this._invokes.shift();
       canInvokeNext = true;
     }
 
     if (canInvokeNext) {
-      console.log('>>>> invoking');
       this._invokes.push(new Date().getTime());
       const func = this._que.shift();
       func && func();
       setTimeout(() => {
-        console.log('+++++++++++++++ timeout');
         this.tryNext();
       }, this._cool);
     }
@@ -59,7 +54,6 @@ export class Queue {
       throw `${action} is typeof "function"`;
     }
     this._que.push(action);
-    console.log('+++++++++++++++ push');
     this.tryNext();
   }
 
