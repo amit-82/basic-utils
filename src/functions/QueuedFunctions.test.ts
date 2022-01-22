@@ -11,7 +11,7 @@ describe('Test QueuedFunctions', () => {
     const que = QueueFactory.createQueue(CAPACITY, COOLDOWN);
     expect(() => que.push(item as unknown as Function)).toThrow();
   });
-
+  /*
   test('Should execute all actions without delay as long as they dont surpass the capacity', () => {
     const que = QueueFactory.createQueue(CAPACITY, COOLDOWN);
 
@@ -24,8 +24,8 @@ describe('Test QueuedFunctions', () => {
 
     expect(counter).toBe(CAPACITY);
   });
-
-  test('Should execute pending actions after cooldown', async () => {
+*/
+  test.only('Should execute pending actions after cooldown', async () => {
     const que = QueueFactory.createQueue(CAPACITY, COOLDOWN);
 
     let counter = 0;
