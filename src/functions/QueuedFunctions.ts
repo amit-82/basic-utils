@@ -28,14 +28,11 @@ export class Queue {
       return false;
     }
 
-    console.log('---- try next?');
     let canInvokeNext = false;
     if (this._invokes.length < this._cap) {
-      console.log('---- yes A');
       canInvokeNext = true;
     } else if (this._invokes[0] < new Date().getTime() - this._cool) {
       // oldest has expired
-      console.log('---- yes B');
       this._invokes.shift();
       canInvokeNext = true;
     }
