@@ -38,11 +38,7 @@ describe('Test QueuedFunctions', () => {
 
     expect(counter).toBe(CAPACITY);
 
-    console.log('!!!');
-    console.log(new Date().getTime());
     await delay(COOLDOWN * 1.5);
-    console.log(new Date().getTime());
-    console.log('!!!2');
     expect(counter).toBe(CAPACITY * 2);
 
     await delay(COOLDOWN * 1.5);
