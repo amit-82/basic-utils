@@ -1,6 +1,13 @@
 export type UnknownObject = Record<string | number | symbol, unknown>;
 export type StringNumberObject = string | number | UnknownObject;
 
+export function getGlobalScope() {
+  if (typeof self !== 'undefined') return self;
+  if (typeof window !== 'undefined') return window;
+  if (typeof global !== 'undefined') return global;
+  return undefined;
+}
+
 export function isObject(target: unknown) {
   return !!target && typeof target === 'object' && !Array.isArray(target);
 }
