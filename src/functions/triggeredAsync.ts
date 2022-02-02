@@ -1,6 +1,6 @@
 const createTriggeredAsync = <T>(action: () => Promise<T>) => {
-  let resolveRef: (value: unknown) => void;
-  const promise = new Promise((resolve) => {
+  let resolveRef: (value: T) => void;
+  const promise = new Promise<T>((resolve) => {
     resolveRef = resolve;
   });
 
