@@ -84,12 +84,10 @@ export class Queue {
   }
 }
 
-export default {
-  /**
-   *
-   * @param capacity number of action that can be performed without delay
-   * @param cooldown milliseconds to wait since the oldest "active" action was executed
-   * @returns
-   */
-  createQueue: (capacity: number, cooldown: number) => new Queue(capacity, cooldown),
-};
+/**
+ *
+ * @param capacity number of action that can be performed without delay
+ * @param cooldown milliseconds to wait since the oldest "active" action was executed
+ * @returns
+ */
+export const createQueue = (capacity: number, cooldown: number) => new Queue(capacity, cooldown);
