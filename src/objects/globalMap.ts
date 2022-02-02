@@ -7,7 +7,7 @@ const vauletKey = Symbol('singletonVaulet');
 const map = new Map<StrNumSym, any>();
 g[vauletKey] = map;
 
-export function setGlobal<T>(key: StrNumSym, value: T, override = false, throwIfTaken = true) {
+export function setGlobal<T>(key: StrNumSym, value: T, override = false, throwIfTaken = true): T {
   if (map.has(key)) {
     if (override) {
       map.set(key, value);
