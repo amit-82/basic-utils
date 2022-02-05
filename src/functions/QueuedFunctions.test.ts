@@ -27,7 +27,7 @@ describe.skip('Test QueuedFunctions', () => {
     expect(counter).toBe(CAPACITY);
   });
 
-  test.skip('Should execute pending actions after cooldown', async () => {
+  test('Should execute pending actions after cooldown', async () => {
     const que = createQueue(CAPACITY, COOLDOWN);
 
     let counter = 0;
